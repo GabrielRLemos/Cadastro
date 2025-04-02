@@ -1,26 +1,21 @@
 <?php
-// Ativar exibição de erros
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Base path
 $base_path = __DIR__;
 
-// Incluir arquivos necessários
 require $base_path . '/connection.php';
 require $base_path . '/includes/listar_departamentos.php';
 require $base_path . '/includes/editar_funcionarios.php';
 require $base_path . '/includes/remover_funcionarios.php';
 require_once $base_path . '/includes/filtro_departamento.php';
 
-// Obtém a lista de departamentos
 $departamentos = getDepartamentos($conn);
 
-// Verifica se há um filtro aplicado
 $filtro_departamento = isset($_POST['filtro_departamento']) ? intval($_POST['filtro_departamento']) : '';
 
-// Busca os funcionários (com filtro, se aplicável)
 $result = getFuncionariosFiltrados($conn, $filtro_departamento);
 ?>
 
@@ -135,6 +130,5 @@ $result = getFuncionariosFiltrados($conn, $filtro_departamento);
 </html>
 
 <?php
-// Fecha a conexão com o banco
 $conn->close();
 ?>
