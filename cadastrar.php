@@ -1,11 +1,11 @@
 <?php
-require 'connection.php'; // Inclui a conexão
+require 'connection.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $nomeF = $_POST['nomeF'];
         $departamento = $_POST['departamento'];
         $cpf = $_POST['cpf'];
-        $cpf = preg_replace("/\D/", "", $_POST['cpf']); // EXPLICAR GUSTAVO E VITORIA REGEX (TEM NO CHAT QLQR COISA)
+        $cpf = preg_replace("/\D/", "", $_POST['cpf']); 
         $email = $_POST['email'];
     
         $stmt = $conn->prepare("INSERT INTO funcionarios (nome_funcionario, id_departamento, cpf, email) VALUES (?, ?, ?, ?)");
