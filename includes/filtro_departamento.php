@@ -1,7 +1,6 @@
 <?php
 if (!function_exists('getFuncionariosFiltrados')) {
     function getFuncionariosFiltrados($conn, $filtro_departamento = '') {
-        // Prevenir SQL injection
         $where = '';
         if (!empty($filtro_departamento)) {
             $filtro_departamento = intval($filtro_departamento);
