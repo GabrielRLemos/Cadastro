@@ -81,7 +81,7 @@ CREATE TABLE funcionarios (
 
 ## ✉️ Contato
 
-Gabriel Lemos - [gabrielrlemos@email.com](mailto:gabrielrlemos@email.com)
+Gabriel Lemos - [gabriel97rl@gmail.com](mailto:gabriel97rl@gmail.com)
 
 Link do Projeto: [https://github.com/GabrielRLemos/Cadastro](https://github.com/GabrielRLemos/Cadastro)
 
