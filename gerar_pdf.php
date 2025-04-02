@@ -15,7 +15,7 @@ if ($filtro) {
 }
 
 $result = $conn->query($sql);
-$total_funcionarios = $result->num_rows; // Conta o número total de registros
+$total_funcionarios = $result->num_rows;
 
 // Criar PDF com margens reduzidas
 $pdf = new FPDF('L', 'mm', 'A4');
@@ -60,7 +60,7 @@ while ($row = $result->fetch_assoc()) {
 
 // Linha de totalização
 $pdf->SetFont('Arial', 'B', 10);
-$pdf->SetFillColor(220, 220, 220); // Cinza claro para destacar
+$pdf->SetFillColor(220, 220, 220); 
 $pdf->Cell(15, $altura_linha, '', 1, 0, 'C', true);
 $pdf->Cell(70, $altura_linha, 'Total de Funcionarios:', 1, 0, 'R', true);
 $pdf->Cell(35, $altura_linha, '', 1, 0, 'C', true);
